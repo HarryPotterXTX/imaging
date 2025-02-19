@@ -14,21 +14,21 @@
             color: #333;
         }
         header {
-            background: #4CAF50;
+            background: #002a7e;
             color: white;
-            padding: 60px 0;
+            padding: 30px 0;
             text-align: center;
-            height: 100px;
+            height: 140px;
         }
-        .container {
+        /* .container {
             width: 80%;
             margin: 20px auto;
             background: white;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+        } */
         h1, h2, h3 {
-            color: #4CAF50;
+            color: #002a7e;
         }
         h1 {
             margin-top: 0;
@@ -38,7 +38,7 @@
             width: 90%;
         }
         section h2 {
-            border-bottom: 2px solid #4CAF50;
+            border-bottom: 2px solid #002a7e;
             padding-bottom: 10px;
         }
         section h3 {
@@ -50,6 +50,7 @@
         p {
             margin: 0% 0;
             font-size: 20px;
+            text-indent: 2em;
         }
         .img-placeholder {
             background: #e0e0e0;
@@ -68,14 +69,15 @@
             margin-top: 40px;
         }
         img {
-            max-width: 70%;
+            max-width: 90%;
             /* height: auto;  */
             display: block;
             margin: 20px auto;
         }
         .container {
             width: 100%;
-            max-width: 1200px; /* 限制最大宽度 */
+            margin: 20px auto;
+            max-width: 1200px; 
         }
         video {
             max-width: 60%;
@@ -86,179 +88,69 @@
             display: flex; /* 启用 Flexbox 布局 */
             justify-content: space-between; /* 视频之间留出空间 */
         }
-
+        li {
+            font-size: 20px;
+        }
+        .image-left {
+            display: grid;
+            grid-template-columns: auto 1fr; 
+            gap: 20px; 
+            align-items: start;
+        }        
+        .grid-image {
+            max-width: 150px; 
+            height: auto; 
+        }
     </style>
 </head>
 <body>
-
     <header>
-        <h1 style="color: white;">面向前端融合的编码摄像理论与技术</h1>
+        <!-- <img style="max-width: 10%;" src="images/logo.png" alt="项目简介">
+        <p style="color: white; font-size: 40px;">国家自然科学基金重点项目</p>
+        <p style="color: white; font-size: 40px;">面向前端融合的编码摄像理论与技术</p> -->
+        <div class="container">
+            <p class="image-left">
+                <img src="images/logo.png" alt="logo" class="grid-image">
+                <span style="color: white; font-size: 40px; text-align: center; text-indent: 0;">
+                    国家自然科学基金重点项目<br>
+                    面向前端融合的编码摄像理论与技术
+                </span>
+            </p>
+        </div>
     </header>
-
     <div class="container">
+    <!-- <div> -->
         <section id="introduction">
             <h2>项目介绍</h2>
+            <p>传统成像技术普遍采用“先采集，后处理”的模式，但在实际应用中面临采集速度受限、感知灵敏度不足、实时性差等多重挑战。其根本原因在于前端光学采集系统与后端计算方法的割裂，导致光信息采集通量受限、成像质量不佳及能耗水平较高。为此，本项目提出了前端光学采集与后端计算深度融合的新型编码成像体系，旨在突破传统成像技术的性能瓶颈与能耗限制。</p>
+            <p>项目围绕高速、高灵敏度及低功耗成像目标，开展了高时空分辨率、高灵敏度、低功耗编码摄像理论与关键技术研究，继而设计轻量级原型系统，提高了编码摄像系统的实用性。在上述研究的基础上，项目组设计并搭建了面向无人系统应用的编码成像验证平台，通过应用验证与示范，推动技术落地，为无人驾驶、智能监控及生物医学成像等领域提供理论支持与技术保障。</p>
             <img src="images/项目简介.png" alt="项目简介">
-            <p>传统成像技术普遍采用“先采集，后处理”的模式，但在实际应用中面临采集速度受限、感知灵敏度不足、实时性差等多重挑战。其根本原因在于前端光学采集系统与后端计算方法的割裂，导致光信息采集通量受限、成像质量不佳及能耗水平较高。为此，本项目提出了前端光学采集与后端计算深度融合的新型编码成像体系，旨在突破传统成像技术的性能瓶颈与能耗限制。项目围绕高速、高灵敏度及低功耗成像目标，开展了高时空分辨率、高灵敏度、低功耗编码摄像理论与关键技术研究，继而设计轻量级原型系统，提高了编码摄像系统的实用性。在上述研究的基础上，项目组设计并搭建了面向无人系统应用的编码成像验证平台，通过应用验证与示范，推动技术落地，为无人驾驶、智能监控及生物医学成像等领域提供理论支持与技术保障。</p>
         </section>
 
         <section id="achievements">
             <h2>代表性研究成果</h2>
-            <img src="images/代表性研究成果.png" alt="代表性研究成果">
-            <p>以下是项目取得的一些代表性成果。</p>
-            <h3>成果一：高速高分辨编码摄像</h3>
-                <p>现有挑战：传统成像系统通量受限，无法兼顾空域结构和时域变化细节；现有编码摄像机制受物理器件限制，空间分辨率局限于百万像素、帧率局限于千赫兹。</p>
-                <img src="images/挑战1.png" alt="挑战1">
-                <h4>方案一：千万像素百赫兹成像</h4>
-                    <p>提出了深度光学压缩编码成像方法，通过编码器件和解码算法联合优化，实现了千万像素视频百赫兹编码成像，并大幅提升了系统光通量和成像通量。</p>
-                    <img src="images/成果1_1.png" alt="成果1_1">
-                    <p>实验结果：空间分辨率16X：1.2Mega &#8594 19.2Mega; 时间分辨率  8X：15fps &#8594 120fps。</p>
-                    <video controls>
-                        <source src="images/结果1_1_1.mp4" type="video/mp4">
-                        您的浏览器不支持视频标签。
-                    </video>
-                    <video controls>
-                        <source src="images/结果1_1_2.mp4" type="video/mp4">
-                        您的浏览器不支持视频标签。
-                        </video>
-                    <video controls>
-                        <source src="images/结果1_1_3.mp4" type="video/mp4">
-                        您的浏览器不支持视频标签。
-                    </video>
-                    <video controls>
-                        <source src="images/结果1_1_4.mp4" type="video/mp4">
-                        您的浏览器不支持视频标签。
-                    </video>
-                <h4>方案二：百万像素万赫兹成像</h4>
-                    <p>提出了事件增强的时空压缩编码成像方法，以事件引导高速场景结构的重建，将百万像素视频帧率从千赫兹提升至万赫兹。</p>
-                    <img src="images/成果1_2.png" alt="成果1_2">
-                    <p>实验结果：</p>
-                    <img src="images/结果1_2.png" alt="结果1_2">
-
-            <h3>成果二：高灵敏度编码摄像</h3>
-                <p>现有挑战：光电传感器灵敏度和响应范围有限，在复杂环境光照下成像性能退化，无法有效感知场景信息。</p>
-                <img src="images/挑战2.png" alt="挑战2">
-                <h4>方案一：大规模有标注弱光视频数据库</h4>
-                    <p>构建大规模低照度自然场景数据集DarkVision，包含1000个静态场景、100个动态序列、6个光照度、3种相机，提供了正常光照数据参照和关键物体标注。</p>
-                    <img src="images/成果2_1.png" alt="成果2_1">
-                    <img src="images/成果2_1_1.png" alt="成果2_1">
-                <h4>方案二：NIR+RGB低照度视频采集</h4>
-                    <p>设计与研制了紧凑的NIR-RGB双传感器相机系统，采集光子数提升1倍，联合挖掘时空谱结构，实现了低照度环境下高灵敏度视频采集。</p>
-                    <img src="images/成果2_2.png" alt="成果2_2">
-                    <p>设计了一个基于双向ConvLSTM和CNN的双通道多帧注意网络，联合挖掘时空谱结构，实现了低照度环境下高灵敏度视频采集。</p>
-                    <img src="images/成果2_2_1.png" alt="成果2_2">
-                    <p>实验结果：</p>
-                    <img src="images/结果2_2.png" alt="结果2_2">
-                    <video controls>
-                        <source src="images/结果2_2.mp4" type="video/mp4">
-                        您的浏览器不支持视频标签。
-                    </video>
-                <h4>方案三：Event+RGB大动态范围视频采集</h4>
-                    <p>设计与搭建了Event+RGB的混合相机系统，提出了事件引导的光流配准和灰度补偿方法，实现大动态范围场景亮度补偿和物体鲁棒检测。</p>
-                    <img src="images/成果2_3.png" alt="成果2_3">
-                    <p>实验结果：</p>
-                    <img src="images/结果2_3.png" alt="结果2_3">
-                    <img src="images/结果2_3_1.png" alt="结果2_3">
-                <h4>方案四：夜间场景鲁棒物体检测</h4>
-                    <p>设计了光照模式感知策略，提出了时-空联合的光照自适应交叉注意力机制，实现夜间低照度、大动态范围的物体鲁棒检测。</p>
-                    <img src="images/成果2_4.png" alt="成果2_4">
-                    <p>实验结果：</p>
-                    <img src="images/结果2_4.png" alt="结果2_4">
-            <h3>成果三：低功耗视觉信息采集</h3>
-                <p>现有挑战：无人平台计算资源有限，紧致耦合视频解码重建复杂度高，已有重建算法需在重建精度、灵活度、速度之间折衷，无法实现大规模视频高效解耦重建。</p>
-                <img src="images/挑战3.png" alt="挑战3">
-                <h4>方案一：大规模视频信息快速解耦重建</h4>   
-                    <p>提出了模型与数据联合驱动的混合解码架构，在精度相当的前提下解码速度提升两个数量级，百万像素的单曝光高速高分辨视频解码重建时间从十分钟级降低至秒级。</p>
-                    <img src="images/成果3_1.png" alt="成果3_1">
-                    <p>实验结果：</p>
-                    <img src="images/结果3_1.gif" alt="结果3_1">
-                <h4>方案二：黑盒神经网络多项式展开</h4>   
-                    <p>提出了黑盒神经网络的Taylor展开，实现常见神经网络架构的多项式分解，显著降低神经网络的推理复杂度，为神经网络在资源受限平台的部署奠定基础。</p>
-                    <img src="images/成果3_2.png" alt="成果3_2">
-                    <p>实验结果：</p>
-                    <img src="images/结果3_2.png" alt="结果3_2">    
-            <h3>成果四：低载荷视觉信息采集与处理</h3>  
-                <p>现有挑战：无人平台载荷受限，对视觉感知设备的体积、重量提出了严苛的限制，亟需设计轻量化成像系统，部署对应的高效解码重建算法。</p>
-                <img src="images/挑战4.png" alt="挑战4">
-                <h4>方案一：编码曝光高速高分辨相机</h4>   
-                    <p>设计与搭建了编码曝光相机，提出了基于隐神经表示的视频重建网络，从单张编码曝光图像解码连续视频，实现了轻型的高速高分辨成像。</p>
-                    <img src="images/成果4_1.png" alt="成果4_1">
-                    <p>实验结果：</p>
-                    <video controls>
-                        <source src="images/结果4_1.mp4" type="video/mp4">
-                        您的浏览器不支持视频标签。
-                    </video>
-                    <video controls>
-                        <source src="images/结果4_1_1.mp4" type="video/mp4">
-                        您的浏览器不支持视频标签。
-                    </video>
-                <h4>方案二：编码曝光物体检测</h4>       
-                    <p>设计和搭建了运动信息解码重建网络，直接从编码曝光图像解析物体运动轨迹，降低了物体检测与运动预测功耗。</p>
-                    <img src="images/成果4_2.png" alt="成果4_2">
-                    <p>实验结果：</p>
-                    <img src="images/结果4_2.png" alt="结果4_2">
-                <h4>方案三：便携式千万像素光谱相机</h4>       
-                    <p>设计和研发了基于彩色胶片的轻量级光谱视频采集系统，替代了体积庞大的中继和色散器件，实现了手持式6500万像素超光谱视频成像。</p>
-                    <img src="images/成果4_3.png" alt="成果4_3">
-                    <p>实验结果：</p>
-                    <img src="images/结果4_3.png" alt="结果4_3">
-                    <img src="images/结果4_3_1.png" alt="结果4_3">                    
-        </section>
-
+            <ol>
+                <li>针对高速运动场景成像过程中时间分辨率和空间分辨率无法兼顾的难题，提出了强度-事件联合的混合编码成像方法、复合编码孔径压缩成像方法、深度光学调制的压缩成像方法等，解决了高速高分辨成像面临的带宽限制问题，能够同时捕获高动态场景空间结构和时域变化细节。</li>
+                <li>针对弱光环境中噪声水平高、动态范围大、语义感知困难的问题，提出了亚像素级配准的弱光-强光双路采集系统、构建了有标注的大规模视频数据库，提出了监督式时-空-谱联合的弱光视频增强方法，并设计了低照度视频中光照自适应的物体检测方法， 为极低光照条件下的高质量成像和分析提供了可靠技术手段。</li>
+                <li>针对移动平台载荷受限和计算资源不足的问题，设计与搭建了轻型的编码曝光采集方法和装置、便携式宽视场高分辨光谱采集方法和装置等，提出了基于模型-数据联合驱动的高效重建框架和神经网络多项式展开技术，显著降低了编码成像系统的体积重量和解码重建算法功耗，为资源受限平台的视觉应用提供了有力支持。</li>
+                <li>项目开发的编码摄像感知方法应用于自动驾驶、生物医学和工业检测等领域，为无人物流车、服务机器人、基因测序设备、病理切片扫描仪器、高速工业产线缺陷检测等系统提供装备与技术支撑，稳定运行于多类应用场景，取得了显著的经济效益和社会效益。</li>
+            </ol>	
         <section id="application">
             <h2>推广应用</h2>
             <h3>应用案例一：移动平台视觉导航</h3> 
                 <p>搭建移动无人测试平台，部署视觉、光谱、力觉、惯性、热传感器等，并开发多源态势融合算法，实现环境感知。</p>
-                <img src="images/成果5_1.png" alt="成果5_1">
-                <img src="images/结果5_1.png" alt="结果5_1">
-                <img src="images/结果5_1_1.png" alt="结果5_1">
+                <img src="images/推广1.png" alt="推广1">
             <h3>应用案例二：高速高分辨工业检测系统</h3> 
-                <img src="images/结果5_2.png" alt="结果5_2">
-                <img src="images/结果5_2_1.png" alt="结果5_2">
-                <img src="images/结果5_2_2.png" alt="结果5_2">
-                <img src="images/结果5_2_3.png" alt="结果5_2">
+                <img src="images/推广2.png" alt="推广2">
         </section>
 
         <section id="summary">
             <h2>成果总结</h2>
-                <p>项目实施过程中，课题组成员在国内外重要学术期刊及会议上发表了47篇学术论文，获授权13项国家发明专利，登记软件著作权8项，获得省部级一等奖3项、二等奖1项。综上所述，课题组已超额完成了预期研究目标，并为后续相关研究奠定了坚实的基础。</p>
-                <h3>人才培养</h3>
-                    <ul>
-                        <li>博士研究生8名、硕士研究生10名</li>
-                        <li>博士后2名</li>
-                        <li>入选教育部青年长江学者1名</li>
-                        <li>晋升教授2名，骨干成员晋升副教授1名</li>
-                    </ul>
-                <h3>获奖</h3>
-                    <ul>
-                        <li>中国图象图形学学会技术发明一等奖2次（序1、2）</li>
-                        <li>科技进步一等奖1次（序1）</li>
-                        <li>中国电子学会技术发明二等奖1次（序1）</li>
-                        <li>江苏省优秀硕士论文奖1人次</li>
-                    </ul>
-                <h3>国际合作</h3>
-                    <ul>
-                        <li>项目骨干成员高浩任澳门大学2021~2023客座研究员</li>
-                    </ul>
-                <h3>国际会议与国际期刊学术活动</h3>
-                    <ul>
-                        <li>组织IEEE JSTSP的专刊“Selected Topics on Deep Learning for High-Dimensional Sensing”</li>
-                        <li>ICME 2020~2023、 Photonics Asia 2021-2023 、ISPA 2020等国际会议程序委员</li>
-                        <li>Photonics Asia---Optoelectronic Imaging and Multimedia Technology XI 2024 Conference Chair</li>
-                        <li>ISAIR 2020 ~2022  Area Chair</li>
-                    </ul>
-                <h3>国内外学术研讨</h3>
-                    <ul>
-                        <li>CITA2021-2022、VALSE 2022、中国光谷人工智能大会暨企业家高峰论坛、光学青年科学家论坛、中国量子成像大会等学术交流</li>
-                        <li>组织国内/国际学术会议/论坛20余次，其中2个论坛获得最佳组织奖</li>
-                    </ul>
+                <p>课题组共发表学术论文47篇，包含Nature Communications、IEEE TPAMI、Springer IJCV、OSA Optica、Proc. IEEE、PNAS等领域顶级期刊及CVPR、ICCV、AAAI、ICLR等顶级国际会议；获省部级科技奖励一等奖3项、二等奖1项、科技竞赛一等奖1项；获授权国家发明专利授权13项，并有10项处于实审阶段；登记软件著作权8项；培养博士生8名（其中3名获高校教职）、硕士生10名（1名获评江苏省优秀硕士学位论文）、博士后出站2名，项目成员1名获得国家级青年人才称号。</p>
         </section>
     </div>
-    
-
     <footer>
         <p>&copy; **** 项目团队。保留所有权利。</p>
     </footer>
-
 </body>
 </html>
