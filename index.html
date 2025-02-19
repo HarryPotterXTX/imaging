@@ -20,13 +20,6 @@
             text-align: center;
             height: 140px;
         }
-        /* .container {
-            width: 80%;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        } */
         h1, h2, h3 {
             color: #002a7e;
         }
@@ -44,28 +37,10 @@
         section h3 {
             margin-top: 20px;
         }
-        section h4 {
-            margin-top: 10px;
-        }
         p {
             margin: 0% 0;
             font-size: 20px;
             text-indent: 2em;
-        }
-        span {
-            margin: 0% 0;
-            font-size: 40px;
-            text-indent: 0;
-            max-width: 90%;
-        }
-        .img-placeholder {
-            background: #e0e0e0;
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            margin: 20px 0;
         }
         footer {
             text-align: center;
@@ -85,47 +60,18 @@
             margin: 20px auto;
             max-width: 1200px; 
         }
-        video {
-            max-width: 60%;
-            display: block;
-            margin: 20px auto;
-        }
-        .video-container {
-            display: flex; /* 启用 Flexbox 布局 */
-            justify-content: space-between; /* 视频之间留出空间 */
-        }
         li {
             font-size: 20px;
-        }
-        .image-left {
-            display: grid;
-            grid-template-columns: auto 1fr; 
-            gap: 20px; 
-            align-items: start;
-        }        
-        .grid-image {
-            max-width: 150px; 
-            height: auto; 
         }
     </style>
 </head>
 <body>
     <header>
-        <!-- <img style="max-width: 10%;" src="images/logo.png" alt="项目简介">
-        <p style="color: white; font-size: 40px;">国家自然科学基金重点项目</p>
-        <p style="color: white; font-size: 40px;">面向前端融合的编码摄像理论与技术</p> -->
-        <div class="container">
-            <p class="image-left">
-                <img src="images/logo.png" alt="logo" class="grid-image">
-                <span style="color: white;">
-                    国家自然科学基金重点项目<br>
-                    面向前端融合的编码摄像理论与技术
-                </span>
-            </p>
-        </div>
+        <p class="container">
+            <img src="images/logo.png" alt="logo">
+        </p>
     </header>
     <div class="container">
-    <!-- <div> -->
         <section id="introduction">
             <h2>项目介绍</h2>
             <p>传统成像技术普遍采用“先采集，后处理”的模式，但在实际应用中面临采集速度受限、感知灵敏度不足、实时性差等多重挑战。其根本原因在于前端光学采集系统与后端计算方法的割裂，导致光信息采集通量受限、成像质量不佳及能耗水平较高。为此，本项目提出了前端光学采集与后端计算深度融合的新型编码成像体系，旨在突破传统成像技术的性能瓶颈与能耗限制。</p>
